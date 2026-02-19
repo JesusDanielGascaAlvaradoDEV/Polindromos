@@ -12,8 +12,10 @@ namespace polindromos
     {
         public bool checker(int a)
         {
-            if (a <= 0 ) return false;
-            
+            if (a < 0 ) return false;
+            if (a == 0) return true;
+            var str = a.ToString();
+
             int digitoL = (int)Math.Floor(Math.Log10(a) + 1);
             if (digitoL == 1) return true;
             //int[] digitos = new int[(int)Math.Floor(Math.Log(a) + 1)];
